@@ -45,6 +45,10 @@ import { Drink } from './drink.model';
     <br>
     <button class="btn btn-success" (click)="addClicked(newName.value, newSize.value, newShots.value, newFlavor.value, newMilk.value, newType.value, newCompany.value, newPrice.value);
     newName.value='';
+    newFlavor.value='';
+    newShots.value='';
+    newCompany.value='';
+    newPrice.value='';
     ">Add Drink</button>
   </div>
   `

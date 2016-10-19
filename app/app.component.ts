@@ -8,10 +8,19 @@ import { Drink } from './drink.model';
     <h1>Coffee Shop</h1>
     <drink-list
       [childDrinkList]="masterDrinkList"
+      (clickSender)="showDetails($event)"
     ></drink-list>
-    <new-drink
-      (newDrinkSender)="addDrink($event)"
-    ></new-drink>
+    <div id="editDrink">
+      <edit-drink
+        [childSelectedDrink]="selectedDrink"
+        (doneClickedSender)="finishedEditing()"
+      ></edit-drink>
+    </div>
+    <div id="addDrink">
+      <new-drink
+        (newDrinkSender)="addDrink($event)"
+      ></new-drink>
+    </div>
   </div>
   `
 })
@@ -29,8 +38,10 @@ export class AppComponent {
   showDetails(clickedDrink: Drink) {
     this.selectedDrink = clickedDrink;
   }
+  finishedEditing() {
+    this.selectedDrink = null;
+  }
   addDrink(newDrinkFromChild: Drink) {
     this.masterDrinkList.push(newDrinkFromChild);
-    console.log(newDrinkFromChild);
   }
 }
