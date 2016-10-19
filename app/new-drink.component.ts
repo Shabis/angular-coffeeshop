@@ -17,7 +17,7 @@ import { Drink } from './drink.model';
     </select>
     <br>
     <label>Enter # of Shots:</label>
-    <input #newShots type="number">
+    <input #newShots type="number" min="0" step="1" />
     <br>
     <label>Enter Coffee Flavor:</label>
     <input #newFlavor type="text">

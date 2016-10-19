@@ -6,7 +6,9 @@ import { Drink } from './drink.model';
   template: `
   <div class="container">
     <h1>Coffee Shop</h1>
-    <h3 *ngFor="let currentDrink of masterDrinkList">{{ currentDrink.name }} {{ "Price: $" + currentDrink.price}}</h3>
+    <drink-list
+      [childDrinkList]="masterDrinkList"
+    ></drink-list>
     <new-drink
       (newDrinkSender)="addDrink($event)"
     ></new-drink>
