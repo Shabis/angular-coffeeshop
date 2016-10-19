@@ -31,7 +31,8 @@ export class AppComponent {
     new Drink("mocha", "grande", 2, "hazelnut", "2%", "coffee", "Starbucks", 4.50),
     new Drink("flat white", "venti", 4, "toffee nut", "whole", "coffee", "Starbucks", 6.50),
     new Drink("Caramel Macchiato", "tall", 3, "", "soy milk", "coffee", "Starbucks", 6.50),
-    new Drink("Chai", "venti", 0, "caramel", "non-fat", "tea", "Starbucks", 4.50)
+    new Drink("Chai", "venti", 0, "caramel", "non-fat", "tea", "Starbucks", 4.50),
+    new Drink("mocha frappuccino", "grande", 4, "", "whole", "coffee", "Starbucks", 7.50)
   ];
 
   selectedDrink: Drink = null;
