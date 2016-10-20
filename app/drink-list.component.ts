@@ -4,16 +4,22 @@ import { Drink } from './drink.model';
 @Component({
   selector: 'drink-list',
   template: `
-  <select (change)="onChangePrice($event.target.value)" class="filter">
-    <option value="all">All Drinks</option>
-    <option value="low">Discount Drinks</option>
-    <option value="high">Premium Drinks</option>
-  </select>
-  <select (change)="onChangeType($event.target.value)" class="filter">
-    <option value="all">All Types</option>
-    <option value="coffee">Coffee</option>
-    <option value="tea">Tea</option>
-  </select>
+  <div class="row col-xs-offset-4">
+    <div class="col-xs-4">
+      <select (change)="onChangePrice($event.target.value)" class="filter form-control">
+        <option value="all">All Drinks</option>
+        <option value="low">Discount Drinks</option>
+        <option value="high">Premium Drinks</option>
+      </select>
+    </div>
+    <div class="col-xs-4">
+      <select (change)="onChangeType($event.target.value)" class="filter form-control">
+        <option value="all">All Types</option>
+        <option value="coffee">Coffee</option>
+        <option value="tea">Tea</option>
+      </select>
+    </div>
+  </div>
   <br>
   <br>
 

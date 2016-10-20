@@ -4,8 +4,8 @@ import { Drink } from './drink.model';
 @Component ({
   selector: 'my-coffee-shop',
   template: `
+  <h1 class="jumbotron">Common Grounds</h1>
   <div class="container">
-    <h1>Coffee Shop</h1>
     <drink-list
       [childDrinkList]="masterDrinkList"
       (clickSender)="showDetails($event)"

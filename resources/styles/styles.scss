@@ -1,6 +1,12 @@
-$backgrounds : rgba(93,112,201,.5);
+$backgrounds : rgba(74,38,26,.7);
 
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: $backgrounds;
+}
 
+.col-xs-4 {
+  margin-bottom: 10px;
+}
 
 .btn {
 
@@ -10,6 +16,10 @@ $backgrounds : rgba(93,112,201,.5);
 
 body {
   text-align: center;
+  color: white;
+  background-image: url(../../resources/img/wood.jpg);
+  background-size: 100%;
+
   #addDrink {
     clear: both;
   }
