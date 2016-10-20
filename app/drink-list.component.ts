@@ -5,9 +5,14 @@ import { Drink } from './drink.model';
   selector: 'drink-list',
   template: `
   <select (change)="onChangePrice($event.target.value)" class="filter">
-    <option value="all">All Drink</option>
-    <option value="low">Discount Coffee</option>
-    <option value="high">Premium Coffee</option>
+    <option value="all">All Drinks</option>
+    <option value="low">Discount Drinks</option>
+    <option value="high">Premium Drinks</option>
+  </select>
+  <select (change)="onChangeType($event.target.value)" class="filter">
+    <option value="all">All Types</option>
+    <option value="coffee">Coffee</option>
+    <option value="tea">Tea</option>
   </select>
   <div class="table-responsive">
     <table class="drinks table table-striped">
@@ -21,7 +26,7 @@ import { Drink } from './drink.model';
         <th>price</th>
         <th>Edit?</th>
       </tr>
-      <tr *ngFor="let currentDrink of childDrinkList | price:selectedPrice">
+      <tr *ngFor="let currentDrink of childDrinkList | price:selectedPrice | type:selectedType">
         <td >{{ currentDrink.name }}</td>
         <td>{{ currentDrink.company }}</td>
         <td>{{ currentDrink.size }}</td>
@@ -46,5 +51,9 @@ export class DrinkListComponent {
   public selectedPrice: string = "all";
   onChangePrice(optionFromMenu) {
     this.selectedPrice = optionFromMenu;
+  }
+  public selectedType: string = "all";
+  onChangeType(optionFromMenu) {
+    this.selectedType = optionFromMenu;
   }
 }

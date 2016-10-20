@@ -6,6 +6,7 @@ import { NewDrinkComponent } from './new-drink.component';
 import { DrinkListComponent} from './drink-list.component';
 import { EditDrinkComponent } from './edit-drink.component';
 import { PricePipe } from './price.pipe';
+import { TypePipe } from './type.pipe';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { PricePipe } from './price.pipe';
     NewDrinkComponent,
     DrinkListComponent,
     EditDrinkComponent,
-    PricePipe
+    PricePipe,
+    TypePipe
   ],
   bootstrap: [ AppComponent ]
 })
