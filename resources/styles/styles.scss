@@ -1,7 +1,88 @@
+$backgrounds : rgba(93,112,201,.5);
+
+
+
+.btn {
+
+  font-weight: bold;
+  border: 1px solid #000000;
+}
+
+body {
+  text-align: center;
+  #addDrink {
+    clear: both;
+  }
+}
+
+input {
+  margin: 10px;
+}
+
 #addDrink {
-  clear: both;
+  background: $backgrounds;
+  padding: 15px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  width: 40%;
+  display: block;
+  margin: 15px auto;
+}
+
+
+#newName input[type="text"],
+#newName textarea {
+  width: 100px;
+  height: 30px;
+  border: 1px solid #ccc;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#addDrink input[type="text"]:hover,
+#addDrink textarea:hover {
+  border: 1px solid #aaa;
+}
+
+#addDrink button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#addDrink button[type="submit"]:hover {
+  background: #43A047;
 }
 
 #editDrink {
-  clear: both;
+  background: $backgrounds;
+  padding: 15px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  width: 40%;
+  display: block;
+  margin: 15px auto;
+}
+
+#editDrink input[type="text"]:hover,
+#editDrink textarea:hover {
+  border: 1px solid #aaa;
+}
+
+#editDrink button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#editDrink button[type="submit"]:hover {
+  background: #43A047;
 }

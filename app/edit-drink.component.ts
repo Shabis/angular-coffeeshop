@@ -4,7 +4,7 @@ import { Drink } from './drink.model';
 @Component({
   selector: 'edit-drink',
   template: `
-    <div *ngIf="childSelectedDrink">
+    <div *ngIf="childSelectedDrink" id="editDrink">
       <h1>Edit Drink</h1>
       <div>
         <label>Enter Coffee/Tea Name:</label>

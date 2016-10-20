@@ -14,6 +14,9 @@ import { Drink } from './drink.model';
     <option value="coffee">Coffee</option>
     <option value="tea">Tea</option>
   </select>
+  <br>
+  <br>
+
   <div class="table-responsive">
     <table class="drinks table table-striped">
       <tr>

@@ -10,12 +10,10 @@ import { Drink } from './drink.model';
       [childDrinkList]="masterDrinkList"
       (clickSender)="showDetails($event)"
     ></drink-list>
-    <div id="editDrink">
-      <edit-drink
-        [childSelectedDrink]="selectedDrink"
-        (doneClickedSender)="finishedEditing()"
-      ></edit-drink>
-    </div>
+    <edit-drink
+      [childSelectedDrink]="selectedDrink"
+      (doneClickedSender)="finishedEditing()"
+    ></edit-drink>
     <div id="addDrink">
       <new-drink
         (newDrinkSender)="addDrink($event)"
