@@ -9,14 +9,14 @@ import { Drink } from './drink.model';
 export class PricePipe implements PipeTransform {
   transform(input: Drink[], priceLevel) {
     var output: Drink[] = [];
-    if (priceLevel >= 5) {
+    if (priceLevel === "high") {
       for (var i = 0; i < input.length; i++) {
-        if (input[i].price >= 4) {
+        if (input[i].price >= 5) {
           output.push(input[i]);
         }
       }
       return output;
-    } else if (priceLevel < 5) {
+    } else if (priceLevel === "low") {
       for (var i = 0; i < input.length; i++) {
         if (input[i].price < 5) {
           output.push(input[i]);
