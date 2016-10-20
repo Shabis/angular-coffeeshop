@@ -4,7 +4,9 @@ import { Drink } from './drink.model';
 @Component ({
   selector: 'my-coffee-shop',
   template: `
-  <h1 class="jumbotron">Common Grounds</h1>
+  <div class="jumbotron">
+    <img class="logo" src="../../resources/img/logo.png">
+  </div>
   <div class="container">
     <drink-list
       [childDrinkList]="masterDrinkList"
