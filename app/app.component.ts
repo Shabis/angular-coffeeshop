@@ -14,7 +14,7 @@ import { Drink } from './drink.model';
       [childSelectedDrink]="selectedDrink"
       (doneClickedSender)="finishedEditing()"
     ></edit-drink>
-    <button (click)="addDrinkDiv()" class="btn btn-primary" *ngIf="!hideDrinkButton">Add a Drink</button>
+    <button (click)="addDrinkDiv()" class="btn" *ngIf="!hideDrinkButton">Add a Drink</button>
     <div *ngIf="addADrink" id="addDrink">
       <new-drink
         (newDrinkSender)="addDrink($event)"

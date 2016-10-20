@@ -43,7 +43,7 @@ import { Drink } from './drink.model';
         <td>{{ currentDrink.flavor }}</td>
         <td>{{ currentDrink.milk }}</td>
         <td> {{ currentDrink.price | currency: 'USD':true }}</td>
-        <td><button (click)="editButtonClick(currentDrink)">Edit</button></td>
+        <td><button (click)="editButtonClick(currentDrink)" class="btn">Edit</button></td>
       </tr>
     </table>
   </div>

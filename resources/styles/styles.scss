@@ -4,15 +4,29 @@ $backgrounds : rgba(74,38,26,.7);
   background-color: $backgrounds;
 }
 
+.jumbotron {
+  background: url(../../resources/img/header.jpg);
+  background-size: cover;
+  height: 400px;
+  background-position: 0% 65%;
+}
+
 .col-xs-4 {
   margin-bottom: 10px;
 }
 
-.btn {
+select.filter.form-control {
+  color: white;
+  background-color: #AD8D5E;
+}
 
+.btn {
+  background-color: #AD8D5E;
   font-weight: bold;
   border: 1px solid #000000;
 }
+
+
 
 body {
   text-align: center;
