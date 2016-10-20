@@ -14,7 +14,8 @@ import { Drink } from './drink.model';
       [childSelectedDrink]="selectedDrink"
       (doneClickedSender)="finishedEditing()"
     ></edit-drink>
-    <div id="addDrink">
+    <button (click)="addDrinkDiv()" class="btn btn-primary" *ngIf="!hideDrinkButton">Add a Drink</button>
+    <div *ngIf="addADrink" id="addDrink">
       <new-drink
         (newDrinkSender)="addDrink($event)"
       ></new-drink>
@@ -32,6 +33,12 @@ export class AppComponent {
     new Drink("Chai", "venti", 0, "caramel", "non-fat", "tea", "Starbucks", 4.50)
   ];
 
+  addADrink = false;
+  hideDrinkButton = false;
+  addDrinkDiv() {
+    this.addADrink = true;
+    this.hideDrinkButton = true;
+  }
   selectedDrink: Drink = null;
   showDetails(clickedDrink: Drink) {
     this.selectedDrink = clickedDrink;
@@ -41,5 +48,7 @@ export class AppComponent {
   }
   addDrink(newDrinkFromChild: Drink) {
     this.masterDrinkList.push(newDrinkFromChild);
+    this.hideDrinkButton = false;
+    this.addADrink = false;
   }
 }
